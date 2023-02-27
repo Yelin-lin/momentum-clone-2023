@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'MICEGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
 body,html{
     font-family: MICEGothic Bold;
     height: 100%; 
@@ -34,12 +41,25 @@ body,html{
     display: none;
 }
 
+li {
+    font-weight: 400;
+   list-style-type: none;
+   font-size: 20px;
+   height: 40px;
+}
+
+li span{
+    font-family: 'MICEGothic';
+    font-weight: 600;
+    padding: 0px 5px;
+}
+
 #greeting{
     font-size: 50px;
     color : white;
 }
 
-img {
+.bgImageName {
     position:absolute;
     overflow: none;
     width:100%;
@@ -51,3 +71,9 @@ img {
     z-index: -1;
     opacity:80%;
     }
+
+li img{
+    display: inline-flex;
+    height: 20px;
+    width: 20px;
+}
