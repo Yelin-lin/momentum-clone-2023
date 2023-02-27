@@ -41,6 +41,25 @@ body,html{
     display: none;
 }
 
+#todo-form{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(256, 256, 256, 0.3);
+}
+
+#todo-form > img {
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding-right: 5px;
+}
+
+ul{
+    padding:0;
+    margin: 20px 0;
+}
+
 li {
     font-weight: 400;
    list-style-type: none;
@@ -63,6 +82,7 @@ input[type=text]{
     background-color: transparent;
     height : 30px;
     width : 300px;
+    padding: 0 5px;
 }
 
 input::placeholder{
