@@ -44,7 +44,8 @@ body,html{
 #todo-form{
     display: flex;
     flex-direction: row;
-    background-color: rgba(256, 256, 256, 0.3);
+    width : 40%;
+    height : 40px;
 }
 
 #todo-form > img {
@@ -55,12 +56,26 @@ body,html{
     padding-right: 5px;
 }
 
+#todo-form input[type=text]{
+    outline: none;
+    border: 0;
+    border-bottom: solid 4px rgba(0, 0, 0, 0.4);
+    font-family: MICEGothic Bold;
+    font-size : 25px;
+    background-color: transparent;
+    width : 100%;
+    padding: 5px;
+}
+
 ul{
-    padding:0;
-    margin: 20px 0;
+    width : 55%;
+    border-radius: 20px;
+    padding:20px 0 15px 0;
+    background-color: rgba(256, 256, 256, 0.3);
 }
 
 li {
+    text-align: center;
     font-weight: 400;
    list-style-type: none;
    font-size: 20px;
@@ -71,18 +86,6 @@ li span{
     font-family: MICEGothic;
     font-weight: 600;
     padding: 0px 5px;
-}
-
-input[type=text]{
-    outline: none;
-    border: 0;
-    border-bottom: solid 4px rgba(0, 0, 0, 0.3);
-    font-family: MICEGothic Bold;
-    font-size : 25px;
-    background-color: transparent;
-    height : 30px;
-    width : 300px;
-    padding: 0 5px;
 }
 
 input::placeholder{
