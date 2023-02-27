@@ -49,9 +49,25 @@ li {
 }
 
 li span{
-    font-family: 'MICEGothic';
+    font-family: MICEGothic;
     font-weight: 600;
     padding: 0px 5px;
+}
+
+input[type=text]{
+    outline: none;
+    border: 0;
+    border-bottom: solid 4px rgba(0, 0, 0, 0.3);
+    font-family: MICEGothic Bold;
+    font-size : 25px;
+    background-color: transparent;
+    height : 30px;
+    width : 300px;
+}
+
+input::placeholder{
+    text-align: center;
+    color : rgba(0, 0, 0, 0.6);
 }
 
 #greeting{
