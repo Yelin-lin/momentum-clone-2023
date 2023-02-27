@@ -15,7 +15,15 @@ function onLoginSubmit(event){
 }
 
 function paintGreetings(username){
-    greeting.innerText = `Hello ${username}`;
+    const greetingsHours = new Date().getHours();
+
+    if(greetingsHours<12){
+        greeting.innerText = `좋은 오전이야, ${username}!`;
+    } else if(greetingsHours==12){
+        greeting.innerText = `완벽한 정오야, ${username}!`;
+    } else{
+        greeting.innerText = `좋은 오후야, ${username}!`;
+    }
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
@@ -27,3 +35,4 @@ if(saveUsername === null){
 } else {
    paintGreetings(saveUsername);
 }
+
