@@ -69,9 +69,20 @@ body,html{
 
 ul{
     width : 55%;
+    height : 20%;
+    overflow:auto;
     border-radius: 20px;
-    padding:20px 0 15px 0;
+    padding:15px;
     background-color: rgba(256, 256, 256, 0.3);
+}
+
+ul::-webkit-scrollbar{
+    width: 15px;
+}
+
+ul::-webkit-scrollbar-thumb{
+    background-color: rgba(256, 256, 256);
+    border-radius: 80px;
 }
 
 li {
@@ -79,13 +90,13 @@ li {
     font-weight: 400;
    list-style-type: none;
    font-size: 20px;
-   height: 40px;
+   padding: 5px 0;
 }
 
 li span{
     font-family: MICEGothic;
     font-weight: 600;
-    padding: 0px 5px;
+    margin: 0 8px;
 }
 
 input::placeholder{
