@@ -33,6 +33,12 @@ function paintTodo(newTodo){
     toDoList.appendChild(li);
 }
 
+function countTodo(){
+    const countDiv = document.querySelector("#todo-form div");
+    // toDoForm 로 div에 들어갈 수 있는 방법 강의에서 찾아보기 분명 있었음
+    countDiv.innerText = toDos.length+1;
+}
+
 function handleTodoSubmit(event) {
     event.preventDefault();
     const newTodo = toDoInput.value;
@@ -54,4 +60,7 @@ if(savedToDos){
     const parsedToDos = JSON.parse(savedToDos);
     toDos = parsedToDos;
     parsedToDos.forEach(paintTodo);
+    countTodo();
 } 
+
+// console.log(toDos.length);
