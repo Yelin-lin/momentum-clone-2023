@@ -51,10 +51,10 @@ body,html{
 #todo-form > div{
     display: flex;
     font-size: 25px;
-    color: white;
+    color: rgba(0,0,0,0.7);
     align-items: center;
     justify-content: center;
-    padding: 0 7px;
+   padding: 0 7px;
 }
 
 #todo-form > img {
@@ -128,7 +128,8 @@ input::placeholder{
     right:0px;
     bottom:0px;
     z-index: -1;
-    opacity:80%;
+    opacity:70%;
+    filter: brightness(70%);
     }
 
 li img{
