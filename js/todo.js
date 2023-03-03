@@ -18,6 +18,12 @@ function deleteTodo(event){
     countTodo();
 }
 
+function checkTodo(event){
+    const li = event.target.parentElement;
+    const span = li.querySelector("span");
+    span.classList.toggle("clear");
+}
+
 function paintTodo(newTodo){
     const li = document.createElement("li");
     li.id = newTodo.id;
@@ -25,12 +31,19 @@ function paintTodo(newTodo){
     img.src = "/img/cloud.png";
     const span = document.createElement("span");
     span.innerText=newTodo.text;
-    const button = document.createElement("button");
-    button.innerText = "❌";
-    button.addEventListener("click", deleteTodo)
+    const xButton = document.createElement("button");
+    xButton.innerText = "❌";
+
+    const checkButton = document.createElement("button");
+    checkButton.innerText = "⭕";
+
+    xButton.addEventListener("click", deleteTodo);
+    checkButton.addEventListener("click", checkTodo);
+
     li.appendChild(img);
     li.appendChild(span);
-    li.appendChild(button);
+    li.appendChild(checkButton);
+    li.appendChild(xButton);
     toDoList.appendChild(li);
     countTodo();
 }
