@@ -15,6 +15,7 @@ function deleteTodo(event){
     li.remove();
     toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
     saveTodo();
+    countTodo();
 }
 
 function paintTodo(newTodo){
@@ -31,12 +32,13 @@ function paintTodo(newTodo){
     li.appendChild(span);
     li.appendChild(button);
     toDoList.appendChild(li);
+    countTodo();
 }
 
 function countTodo(){
     const countDiv = document.querySelector("#todo-form div");
     // toDoForm 로 div에 들어갈 수 있는 방법 강의에서 찾아보기 분명 있었음
-    countDiv.innerText = toDos.length+1;
+    countDiv.innerText = toDos.length;
 }
 
 function handleTodoSubmit(event) {
