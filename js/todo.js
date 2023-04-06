@@ -28,7 +28,7 @@ function paintTodo(newTodo){
     const li = document.createElement("li");
     li.id = newTodo.id;
     const img = document.createElement("img");
-    img.src = "/img/cloud.png";
+    img.src = "img/cloud.png";
     const span = document.createElement("span");
     span.innerText=newTodo.text;
     const xButton = document.createElement("button");

@@ -20,7 +20,7 @@ function paintGreetings(username){
     if(greetingsHours<12){
         greeting.innerText = `좋은 오전이야, ${username}!`;
     } else if(greetingsHours==12){
-        greeting.innerText = `완벽한 정오야, ${username}!`;
+        greeting.innerText = `귀염둥이를 보고 힘을 내! ${username}!`;
     } else{
         greeting.innerText = `좋은 오후야, ${username}!`;
     }

@@ -7,10 +7,12 @@ function onGeoOk(position){
     fetch(url)
         .then(Response => Response.json()
         .then(data => {
-            const weather = document.querySelector("#weather span:first-child");
-            const city = document.querySelector("#weather span:last-child");
-            city.innerText = data.name;
-            weather.innerText =  `${data.weather[0].main} / ${data.main.temp}`;
+            const city = document.querySelector("#weather div:first-child");
+            const weather = document.querySelector("#weather div:nth-child(2)");
+            const temp = document.querySelector("#weather div:last-child");
+            city.innerText = `위치 : ${data.name}`;
+            weather.innerText =  `날씨 : ${data.weather[0].main}`;
+            temp.innerText = `온도 : ${data.main.temp}`;
     }));
 }
 
@@ -19,3 +21,5 @@ function onGeoError(){
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+
+//https://namjackson.tistory.com/27

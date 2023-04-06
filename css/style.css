@@ -141,3 +141,10 @@ li img{
     height: 20px;
     width: 20px;
 }
+
+/*weather*/
+#weather{
+    position: absolute;
+    top : 5%;
+    right: 3%;
+}
